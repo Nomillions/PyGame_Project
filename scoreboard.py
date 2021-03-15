@@ -14,9 +14,9 @@ class Scoreboard:
         self.prep_score()
 
     def prep_score(self):
-        score_str = str(self.stats)
+        score_str = str(self.stats.score)
         self.score_image = self.font.render(
-            score_str, Ture, self.text_color, self.settings.bg_color
+            score_str, True, self.text_color, self.settings.bg_color
         )
 
         self.score_rect = self.score_image.get_rect()
@@ -24,4 +24,4 @@ class Scoreboard:
         self.score_rect.top = 20
 
     def show_score(self):
-        self.screem.blit(self.score_image, self.score_rect)
+        self.screen.blit(self.score_image, self.score_rect)
